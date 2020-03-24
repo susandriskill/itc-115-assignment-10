@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 //An AdvanceTicket represents a ticket with a ticket number, a price of $30.00
-//if it was purchased 10 or more days in advance, and a price of $40.00 if it
-//was purchased fewer than 10 days before the event.
+//if it was purchased 10 or more days in advance of the event, and a price of 
+//$40.00 if it was purchased fewer than 10 days in advance of the event.
 
 public class AdvanceTicket extends Ticket {
 	
@@ -20,16 +20,16 @@ public class AdvanceTicket extends Ticket {
 	public double getPrice() {
 		if (this.numberOfDaysInAdvance >= 10) {
 			return priceForTenOrMoreDaysInAdvance;
-		} 
+		}
 		else {
 			return priceForTenOrFewerDaysInAdvance;
 			}
 	}
-	
+
 	public int getDays() {
 		return this.numberOfDaysInAdvance;
 	}
-//------------------------------------------------------------------------------
+
 	public String toString() {
 		return "Ticket Number: " + getNumber() + ", Ticket Price: " + getPrice()
 		+ " Advance Ticket Discount Applied. Ticket was purchased " + getDays()
