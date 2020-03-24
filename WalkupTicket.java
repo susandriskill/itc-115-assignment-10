@@ -5,20 +5,20 @@
 public class WalkupTicket extends Ticket {
 	
 	//Fields:
-	private double price = 50.0;
+	private double ticketPrice = 50.0;
 	
 	//Constructors:
-	public WalkupTicket(int number) {
-		super(number);
+	public WalkupTicket(int ticketNumber) {
+		super(ticketNumber);
 	}
 
 	//Methods:	
 	public double getPrice() {
-		return price;
+		return ticketPrice;
 	}
 
 	public String toString() {
-		return "Ticket Number: " + super.getNumber() + ", Price: $" + getPrice(); 
+		return "Number: " + super.getNumber() + ", Price: $" + getPrice(); 
 	}
 
 }

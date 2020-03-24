@@ -7,23 +7,23 @@ public class AdvanceTicket extends Ticket {
 	
 	//Fields:
 	private int numberOfDaysInAdvance;
-	private double priceForTenOrMoreDaysInAdvance = 30.0;
-	private double priceForTenOrFewerDaysInAdvance = 40.00;
+	private double ticketPrice;
 	
 	//Constructors:
-	public AdvanceTicket(int number, int numberOfDaysInAdvance) {
-		super(number);
+	public AdvanceTicket(int ticketNumber, int numberOfDaysInAdvance) {
+		super(ticketNumber);
 		this.numberOfDaysInAdvance = numberOfDaysInAdvance;
 	}
 
 	//Methods:
 	public double getPrice() {
 		if (this.numberOfDaysInAdvance >= 10) {
-			return priceForTenOrMoreDaysInAdvance;
+			ticketPrice = 30.0;
 		}
 		else {
-			return priceForTenOrFewerDaysInAdvance;
+			ticketPrice = 40.0;
 			}
+		return ticketPrice;
 	}
 
 	public int getDays() {
@@ -31,7 +31,7 @@ public class AdvanceTicket extends Ticket {
 	}
 
 	public String toString() {
-		return "Ticket Number: " + getNumber() + ", Ticket Price: " + getPrice()
+		return "Number: " + getNumber() + ", Price: $" + getPrice()
 		+ " Advance Ticket Discount Applied. Ticket was purchased " + getDays()
 		+ " day/s before the event.";
 	}

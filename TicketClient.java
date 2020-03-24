@@ -11,7 +11,7 @@ public class TicketClient {
 
 	//Test walk-up ticket sale.
 	public static void WalkupTicket() {
-		for (int i = 1000; i <= 1003; i++) {
+		for (int i = 1001; i <= 1005; i++) {
 			WalkupTicket ticket = new WalkupTicket (i);
 			System.out.println(ticket);
 			}

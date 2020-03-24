@@ -4,16 +4,16 @@
 public abstract class Ticket {
 	
 	//Fields:
-	private int number;
+	private int ticketNumber;
 	
 	//Constructors:
-	public Ticket(int number) {
-		this.number = number;
+	public Ticket(int ticketNumber) {
+		this.ticketNumber = ticketNumber;	
 	}
 	
 	//Getters:
 	public int getNumber() {
-		return number;
+		return ticketNumber;
 	}
 	
 	//Methods:
